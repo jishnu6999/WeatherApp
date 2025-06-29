@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤️ Jishnu's Weather Portal</title>
+  <script>const GOOGLE_MAPS_KEY = "{{ google_maps_key }}";</script>
+  <script defer src="/static/script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .fade-in {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white min-h-screen font-sans">
+
+  <div class="max-w-3xl mx-auto py-10 px-6">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500">
+      🌦️ WeatherScope by Jishnu
+    </h1>
+
+    <!-- Search Form -->
+    <form id="weatherForm" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+      <div class="relative w-full sm:w-2/3">
+        <input type="text" name="location" id="location" placeholder="Search a city..." class="w-full py-2 px-4 pl-10 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-purple-500 transition-all duration-200" required />
+        <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+      </div>
+      <button type="submit" class="bg-purple-600 hover:bg-purple-700 transition px-5 py-2 rounded-lg font-semibold">Search</button>
+    </form>
+
+    <div class="flex justify-center mb-8">
+      <button id="geoBtn" class="text-sm bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg">📍 Use My Location</button>
+    </div>
+
+    <!-- Weather Results -->
+    <div id="result" class="hidden glass rounded-xl p-6 shadow-xl fade-in">
+      <div class="text-center mb-4">
+        <h2 id="cityName" class="text-2xl font-bold"></h2>
+        <p id="weatherInfo" class="text-base text-gray-300 mt-2"></p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mt-4 mb-2 text-purple-400">Hourly Forecast</h3>
+        <div id="hourlyForecast" class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm"></div>
+
+        <h3 class="text-lg font-semibold mt-6 mb-2 text-purple-400">5-Day Forecast</h3>
+        <div id="forecast" class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm"></div>
+
+        <h3 class="text-lg font-semibold mt-6 mb-2 text-purple-400">🌍 Map</h3>
+        <iframe id="map" class="w-full h-64 rounded-lg" frameborder="0" allowfullscreen loading="lazy"></iframe>
+
+        <h3 class="text-lg font-semibold mt-6 mb-2 text-purple-400">🎥 Travel Videos</h3>
+        <div id="videos" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      </div>
+    </div>
+
+    <!-- Info Modal Button -->
+    <div class="text-center mt-10">
+      <button id="infoBtn" class="text-purple-400 underline hover:text-purple-300 transition">ℹ️ About PM Accelerator</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+      <div class="bg-white text-gray-900 p-6 rounded-lg max-w-md shadow-2xl transform transition-all scale-95 animate-fadeIn">
+        <h3 class="text-xl font-bold mb-2">PM Accelerator</h3>
+        <p class="text-sm leading-relaxed">
+          The <strong>Product Manager Accelerator</strong> is a project-based program helping aspiring PMs build real-world skills, network, and portfolio work with mentorship and hands-on guidance.
+          <br><br>
+          Learn more: 
+          <a href="https://www.linkedin.com/company/product-manager-accelerator" target="_blank" class="text-purple-600 underline">PM Accelerator LinkedIn</a>
+        </p>
+        <div class="text-right mt-4">
+          <button class="bg-red-500 text-white px-4 py-2 rounded" id="closeInfo">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-center text-gray-500 text-sm">
+      &copy; 2025 Jishnuvardhan Karpuram · PM Accelerator Weather App 🌐
+    </footer>
+  </div>
+</body>
+</html>
