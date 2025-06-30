@@ -153,9 +153,9 @@ App will run on `http://127.0.0.1:5000`
 
 ## 📸 Screenshots
 
-| Search UI | Forecast & Map |
+| Search UI | Forecast & Map & Youtube |
 |-----------|----------------|
-| ![search](screenshots/main_page.png) | ![forecast](screenshots/forecast_map.png) |
+| ![search](screenshots/main_page.png) | ![forecast](screenshots/forecast_maps_yotube.png) |
 
 ---
 
