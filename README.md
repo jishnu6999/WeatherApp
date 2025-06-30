@@ -36,7 +36,9 @@ weather_app_advanced/
 ├── static/
 │   ├── script.js           # JavaScript for frontend behavior
 │   └── style.css (optional)
-│
+├── screenshots/
+│   ├── main_page.png
+├── .gitignore
 └── README.md               # Project documentation (this file)
 ```
 
@@ -153,7 +155,7 @@ App will run on `http://127.0.0.1:5000`
 
 | Search UI | Forecast & Map |
 |-----------|----------------|
-| ![search](screenshots/search.png) | ![forecast](screenshots/forecast_map.png) |
+| ![search](screenshots/main_page.png) | ![forecast](screenshots/forecast_map.png) |
 
 ---
 
@@ -165,20 +167,6 @@ App will run on `http://127.0.0.1:5000`
 | GeoDB            | City autocomplete suggestions       |
 | YouTube Data API | City-related travel videos          |
 | Google Maps Embed| Map embedding for cities            |
-
----
-
-## 🤝 Contribution
-
-Feel free to fork the repo and contribute!
-
-```bash
-git checkout -b feature/my-new-feature
-git commit -m "Add new feature"
-git push origin feature/my-new-feature
-```
-
-Open a Pull Request ✅
 
 ---
 
