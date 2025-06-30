@@ -77,7 +77,7 @@
           The <strong>Product Manager Accelerator</strong> is a project-based program helping aspiring PMs build real-world skills, network, and portfolio work with mentorship and hands-on guidance.
           <br><br>
           Learn more: 
-          <a href="https://www.linkedin.com/company/product-manager-accelerator" target="_blank" class="text-purple-600 underline">PM Accelerator LinkedIn</a>
+          <a href="https://www.linkedin.com/school/pmaccelerator/" target="_blank" class="text-purple-600 underline">PM Accelerator LinkedIn</a>
         </p>
         <div class="text-right mt-4">
           <button class="bg-red-500 text-white px-4 py-2 rounded" id="closeInfo">Close</button>
@@ -90,5 +90,30 @@
       &copy; 2025 Jishnuvardhan Karpuram · PM Accelerator Weather App 🌐
     </footer>
   </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const infoBtn = document.getElementById("infoBtn");
+    const infoModal = document.getElementById("infoModal");
+    const closeInfo = document.getElementById("closeInfo");
+
+    if (infoBtn && infoModal && closeInfo) {
+      infoBtn.addEventListener("click", () => {
+        infoModal.classList.remove("hidden");
+      });
+
+      closeInfo.addEventListener("click", () => {
+        infoModal.classList.add("hidden");
+      });
+
+      infoModal.addEventListener("click", (e) => {
+        if (e.target === infoModal) {
+          infoModal.classList.add("hidden");
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
