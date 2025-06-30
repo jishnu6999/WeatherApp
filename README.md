@@ -1,7 +1,9 @@
 
 # 🌦️ Advanced Weather App
 
-A full-stack, feature-rich weather application built using **Flask**, **MongoDB**, and **Vanilla JavaScript**, styled with **Tailwind CSS**. It allows users to search for weather data by city name or current geolocation, view a 5-day forecast, watch relevant YouTube travel videos, and visualize the location on a Google Map. This project was developed as part of the **PM Accelerator** program.
+- **Author:** Jishnuvardhan Karpuram
+- **Walkthrough Video:**
+A full-stack, feature-rich weather application built using **Flask**, **MongoDB**, **Vanilla JavaScript**, **HTML** styled with **Tailwind CSS**, **python**. It allows users to search for weather data by city name or current geolocation, view a 5-day forecast, watch relevant YouTube travel videos, and visualize the location on a Google Map. This project was developed as part of the **PM Accelerator** program.
 
 ---
 
@@ -36,9 +38,9 @@ weather_app_advanced/
 ├── static/
 │   ├── script.js           # JavaScript for frontend behavior
 │   └── style.css (optional)
-├── screenshots/
+├── screenshots/            #screenshots of working weather page
 │   ├── main_page.png
-├── .gitignore
+├── .gitignore              #gitignore file created while doing git push
 └── README.md               # Project documentation (this file)
 ```
 
@@ -80,11 +82,12 @@ weather_app_advanced/
 Contains sensitive keys used by the backend:
 
 ```
-OPENWEATHER_API_KEY=your_openweathermap_api_key
-YOUTUBE_API_KEY=your_youtube_data_api_key
-GOOGLE_MAPS_KEY=your_google_maps_api_key
-GEODB_API_KEY=your_geodb_api_key
-MONGO_URI=your_mongodb_connection_string
+OPENWEATHER_API_KEY=7c5a57b1633774911ed4f78b2af4c9a2
+YOUTUBE_API_KEY=AIzaSyCKpujyvsmkT-6EZuKfypVEfEvlorSkZL4
+GOOGLE_MAPS_KEY=AIzaSyDYSoaekmxUuQukDsKcBpAABVpxtyk2RKU
+GEODB_API_KEY=ff877b57fdmsh4105283cd4c871cp136c5cjsnda42ea21c1b8
+MONGO_URI=mongodb+srv://Nikhitha:Nikki%402005@cluster0.rwunmqw.mongodb.net/weather_db?retryWrites=true&w=majority&appName=Cluster0
+
 ```
 
 ---
@@ -134,11 +137,18 @@ pip install -r requirements.txt
 Create a `.env` in the root:
 
 ```env
-OPENWEATHER_API_KEY=your_api
-YOUTUBE_API_KEY=your_api
-GOOGLE_MAPS_KEY=your_api
-GEODB_API_KEY=your_api
-MONGO_URI=your_mongodb_uri
+# Weather and Backend
+OPENWEATHER_API_KEY=7c5a57b1633774911ed4f78b2af4c9a2
+MONGO_URI=mongodb+srv://Nikhitha:Nikki%402005@cluster0.rwunmqw.mongodb.net/weather_db?retryWrites=true&w=majority&appName=Cluster0
+
+# Google Maps Embed API Key
+GOOGLE_MAPS_KEY=AIzaSyDYSoaekmxUuQukDsKcBpAABVpxtyk2RKU
+
+# GeoDB Cities API Key (from RapidAPI)
+GEODB_API_KEY=ff877b57fdmsh4105283cd4c871cp136c5cjsnda42ea21c1b8
+
+# YouTube Data API v3 Key
+YOUTUBE_API_KEY=AIzaSyCKpujyvsmkT-6EZuKfypVEfEvlorSkZL4
 ```
 
 ### Run the app
@@ -173,13 +183,12 @@ App will run on `http://127.0.0.1:5000`
 ## 📧 Contact
 
 Built with ❤️ by **Jishnuvardhan Karpuram**  
-[LinkedIn](https://www.linkedin.com/in/jishnuvardhan-karpuram) • [GitHub](https://github.com/jishnu6999)
+[LinkedIn](www.linkedin.com/in/jishnuvardhan-karpuram) • [GitHub](https://github.com/jishnu6999/)
 
 ---
 
 ## 🧠 Acknowledgements
 
 - PM Accelerator Team 🚀  
-- Tailwind CSS Docs  
-- Flask & MongoDB Communities  
-- OpenWeatherMap, YouTube & Google Maps APIs
+- MongoDB Communities  
+- OpenWeatherMap, GeoDB Cities, Mongo, YouTube & Google Maps APIs
