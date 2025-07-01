@@ -2,7 +2,7 @@
 # 🌦️ Advanced Weather App
 
 - **Author:** Jishnuvardhan Karpuram
-- **Walkthrough Video:**
+- **Walkthrough Video:** [Recorded Walkthrough Video of my Project](https://drive.google.com/file/d/1RZl7_J399ZJ1GT9mA1NLuzzkGZJOq6wE/view)
 - **Overview:** A full-stack, feature-rich weather application built using **Flask**, **MongoDB**, **Vanilla JavaScript**, **HTML** styled with **Tailwind CSS**, **python**. It allows users to search for weather data by city name or current geolocation, view a 5-day forecast, watch relevant YouTube travel videos, and visualize the location on a Google Map. This project was developed as part of the **PM Accelerator** program.
 
 ---
